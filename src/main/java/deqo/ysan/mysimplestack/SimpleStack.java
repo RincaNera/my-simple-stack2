@@ -1,10 +1,16 @@
 package deqo.ysan.mysimplestack;
 
+import java.util.ArrayList;
 import java.util.EmptyStackException;
 import java.util.List;
 
 public class SimpleStack implements Stack {
     List<Item> items;
+
+    SimpleStack() {
+        items = new ArrayList<>();
+    }
+
     /**
      * Tests if this stack is empty.
      */
@@ -31,7 +37,11 @@ public class SimpleStack implements Stack {
      * @return Item on top of this stack.
      * @throws EmptyStackException If the stack contains no item.
      */
-    public Item peek() throws EmptyStackException { return items.get(items.size()-1); }
+    public Item peek() throws EmptyStackException {
+        if (items.size() == 0)
+            throw new EmptyStackException();
+        return items.get(items.size()-1);
+    }
 
     /**
      * Removes the object at the top of this stack and returns that object as the value of this function.
@@ -40,6 +50,8 @@ public class SimpleStack implements Stack {
      * @throws EmptyStackException Is the stack contains no item.
      */
     public Item pop() throws EmptyStackException {
+        if (items.size() == 0)
+            throw new EmptyStackException();
         Item item = items.get(items.size()-1);
         items.remove(items.size()-1);
         return item; }
