@@ -22,8 +22,11 @@ public class SimpleStack implements Stack {
 
     /**
      * Tests if this stack is empty.
+     * @return true is the stack is empty.
      */
-    public boolean isEmpty() { return items.isEmpty(); }
+    public boolean isEmpty() {
+        return items.isEmpty();
+    }
 
     /**
      * Returns the number of items in this stack.
@@ -38,7 +41,9 @@ public class SimpleStack implements Stack {
      *
      * @param item item to be pushed.
      */
-    public void push(Item item) { items.add(item); }
+    public void push(Item item) {
+        items.add(item);
+    }
 
     /**
      * Looks at the object at the top of this stack without removing it from the stack.
