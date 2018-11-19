@@ -2,17 +2,18 @@ package deqo.ysan.mysimplestack;
 
 /**
  * An Item.
+ * @param <T>
  */
 public interface Item<T> {
     /**
      * Returns the value of this item.
      * @return The value of this item.
      */
-    public T getData();
+    T getData();
 
     /**
      * Set the value of this item.
      * @param newValue The new value.
      */
-    public void setData(T newValue);
+    void setData(T newValue);
 }

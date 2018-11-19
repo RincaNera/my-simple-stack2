@@ -4,9 +4,18 @@ import java.util.ArrayList;
 import java.util.EmptyStackException;
 import java.util.List;
 
+/**
+ * A simple stack.
+ */
 public class SimpleStack implements Stack {
+    /**
+     * The stack of the items as a list.
+     */
     List<Item> items;
 
+    /**
+     * Build a new stack.
+     */
     SimpleStack() {
         items = new ArrayList<>();
     }

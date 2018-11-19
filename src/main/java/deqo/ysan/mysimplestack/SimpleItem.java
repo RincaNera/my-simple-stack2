@@ -1,5 +1,9 @@
 package deqo.ysan.mysimplestack;
 
+/**
+ * A simple item.
+ * @param <T>
+ */
 public class SimpleItem<T> implements Item<T> {
     /**
      * The value of this item.
@@ -17,7 +21,7 @@ public class SimpleItem<T> implements Item<T> {
      * Set the value of this item.
      * @param newValue The new value.
      */
-    public void setData(T newValue) {
+    public void setData(final T newValue) {
         value = newValue;
     }
 
@@ -25,7 +29,7 @@ public class SimpleItem<T> implements Item<T> {
      * Build an item with a default value.
      * @param defaultValue The default value.
      */
-    SimpleItem (T defaultValue) {
+    SimpleItem(final T defaultValue) {
         value = defaultValue;
     }
 }
